@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
-    private float  horizontal;
+    private float horizontal;
     [SerializeField] private float speed = 8f;
-    [SerializeField]    private float jumpingPower = 16f;
+    [SerializeField] private float jumpingPower = 16f;
     private bool isFacingRight = true;
-    private Rigidbody2D rb;
+
+    [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
 
@@ -17,20 +17,20 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
 
-    if (Input.GetButtonDown("Jump") && IsGrounded())
-    {
-        rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-    }
+        if (Input.GetButtonDown("Jump") && IsGrounded())
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        }
 
-    if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
-    {
-        rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-    }
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
 
         Flip();
     }
 
-    private void FixedUpdate() 
+    private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
@@ -40,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-    private void Flip() 
+    private void Flip()
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
@@ -50,4 +50,5 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = localScale;
         }
     }
-}
+} 
+
