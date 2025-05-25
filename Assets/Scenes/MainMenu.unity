@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -577,7 +576,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5371423342665717396, guid: 0721c9edaf0dd7d439220226ac172c31, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5371423342665717396, guid: 0721c9edaf0dd7d439220226ac172c31, type: 3}
       propertyPath: m_AnchorMax.y
@@ -585,7 +584,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5371423342665717396, guid: 0721c9edaf0dd7d439220226ac172c31, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5371423342665717396, guid: 0721c9edaf0dd7d439220226ac172c31, type: 3}
       propertyPath: m_AnchorMin.y
@@ -593,7 +592,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5371423342665717396, guid: 0721c9edaf0dd7d439220226ac172c31, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 680
+      value: -60
       objectReference: {fileID: 0}
     - target: {fileID: 5371423342665717396, guid: 0721c9edaf0dd7d439220226ac172c31, type: 3}
       propertyPath: m_SizeDelta.y
@@ -605,7 +604,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5371423342665717396, guid: 0721c9edaf0dd7d439220226ac172c31, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 13.599998
+      value: 3.300003
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -740,6 +739,18 @@ PrefabInstance:
     - target: {fileID: 7585661999343354942, guid: a461a2247dc76bc449e8b7d193b7e46a, type: 3}
       propertyPath: m_Name
       value: GameStartPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 7640700685079223035, guid: a461a2247dc76bc449e8b7d193b7e46a, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: e636571314978bc4695afc36a9d2737f, type: 2}
+    - target: {fileID: 7640700685079223035, guid: a461a2247dc76bc449e8b7d193b7e46a, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8169481098668172600, guid: e636571314978bc4695afc36a9d2737f, type: 2}
+    - target: {fileID: 7640700685079223035, guid: a461a2247dc76bc449e8b7d193b7e46a, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
