@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    private float horizontal;
+    //Start movement variables
+    private float horizontal; 
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpingPower = 15f;
     private bool isFacingRight = true;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
-    [SerializeField] private LayerMask groundLayer;
+    [SerializeField] private LayerMask groundLayer; 
+    
+    //End movement variables
 
     void Update()
     {
@@ -22,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
         }
 
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f) // Jump input
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
@@ -30,17 +33,20 @@ public class PlayerMovement : MonoBehaviour
         Flip();
     }
 
+
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
+
 
     private bool IsGrounded()
     {
         return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
-    private void Flip()
+
+    private void Flip() // Flip player face function
     {
         if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
         {
@@ -50,5 +56,6 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = localScale;
         }
     }
+
 } 
 
