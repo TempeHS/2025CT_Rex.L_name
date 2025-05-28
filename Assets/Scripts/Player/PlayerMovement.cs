@@ -55,13 +55,6 @@ public class PlayerMovement : MonoBehaviour
             canDash = false;
             trailRenderer.emitting = true;
             dashingDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-
-            /* if (dashingDirection == Vector2.zero)
-            {
-                dashingDirection = new Vector2(transform.localScale.x, );
-            }
-            */
-
             StartCoroutine(StopDashing());
         }
 
@@ -112,6 +105,5 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = localScale;
         }
     }
-
 } 
 

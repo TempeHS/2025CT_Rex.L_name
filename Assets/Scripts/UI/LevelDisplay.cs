@@ -9,10 +9,13 @@ public class LevelDisplay : MonoBehaviour
     public NextLevelTeleporter nextLevelTeleporter;
     public int levelNumber = 1;
 
+
     public void Update()
     {
         setLevelText();
     }
+
+
     public void setLevelText()
     {
         levelDisplay.text = "Level " + levelNumber.ToString();

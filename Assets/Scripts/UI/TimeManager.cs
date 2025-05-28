@@ -6,9 +6,11 @@ using System;
 
 public class TimeManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] public TextMeshProUGUI timerText;
     [SerializeField] public float currentTime = 60f;
     private bool active = true;
+
+    public LevelManager levelManager;
 
     private void Update()
     {
@@ -16,21 +18,24 @@ public class TimeManager : MonoBehaviour
             return;
 
         currentTime -= Time.deltaTime;
-
         UpdateTimerUI();
 
         if (currentTime <= 0)
         {
             StopTimer();
+            levelManager.GameLost();
         }
     }
+
 
     public void StopTimer()
     {
         active = false;
         currentTime = 0f;
+
         UpdateTimerUI();
     }
+
 
     private void UpdateTimerUI()
     {

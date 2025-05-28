@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System;
 
 public class LevelManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public TimeManager timeManager;
+    public LoseTime loseTime;
+    public TrapDamage trapDamage;
+    public MainMenu mainMenu;
 
-    // Update is called once per frame
-    void Update()
+
+    public void GameLost()
     {
-        
+        SceneManager.LoadScene("LoseMenu");
     }
 }
