@@ -6,10 +6,18 @@ using System;
 
 public class LevelManager : MonoBehaviour
 {
-    public TimeManager timeManager;
-    public LoseTime loseTime;
-    public TrapDamage trapDamage;
-    public MainMenu mainMenu;
+    private TimeManager timeManager;
+    private LoseTime loseTime;
+    private TrapDamage trapDamage;
+    private MainMenu mainMenu;
+
+    void Start()
+    {
+        timeManager = GetComponent<TimeManager>();
+        loseTime = GetComponent<LoseTime>();
+        trapDamage = GetComponent<TrapDamage>();
+        mainMenu = GetComponent<MainMenu>();
+    }
 
 
     public void GameLost()

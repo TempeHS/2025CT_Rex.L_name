@@ -10,8 +10,12 @@ public class TimeManager : MonoBehaviour
     [SerializeField] public float currentTime = 60f;
     private bool active = true;
 
-    public LevelManager levelManager;
+    private LevelManager levelManager;
 
+    void Start()
+    {
+        levelManager = GetComponent<LevelManager>();
+    }
     private void Update()
     {
         if (!active)

@@ -5,7 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class TrapDamage : MonoBehaviour
 {
-        public LoseTime loseTime;
+        private LoseTime loseTime;
+
+        void Start()
+        {
+                loseTime = GetComponent<LoseTime>();
+        }
 
         void OnTriggerEnter2D(Collider2D other)
         {

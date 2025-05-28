@@ -7,10 +7,11 @@ public class NextLevelTeleporter : MonoBehaviour
 {
     [SerializeField] private string sceneName;
     
-    public LevelDisplay levelDisplay;
+    private LevelDisplay levelDisplay;
 
     void Start()
     {
+        levelDisplay = GetComponent<LevelDisplay>();
         levelDisplay.setLevelText();
     }
     void OnTriggerEnter2D(Collider2D other)

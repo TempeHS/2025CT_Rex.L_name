@@ -5,11 +5,11 @@ using TMPro;
 
 public class LoseTime : MonoBehaviour
 {
-    public TrapDamage trapDamage;
-    public TimeManager timeManager;
-    public LevelManager levelManager;
+    private TrapDamage trapDamage;
+    private TimeManager timeManager;
+    private LevelManager levelManager;
 
-    public GameObject TimeLostDisplay;
+    new GameObject TimeLostDisplay;
 
     [SerializeField] public TextMeshProUGUI TimeLostText;
 
@@ -18,12 +18,14 @@ public class LoseTime : MonoBehaviour
     void Start()
     {
         TimeLostDisplay.SetActive(false);
+
+        trapDamage = GetComponent<TrapDamage>();
+
     }
 
 
     public void TimeLose()
     {
         TimeLostDisplay.SetActive(true);
-
     }
 }
