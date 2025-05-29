@@ -9,7 +9,7 @@ public class TrapDamage : MonoBehaviour
 
         void Start()
         {
-                loseTime = GetComponent<LoseTime>();
+                loseTime = FindObjectOfType<LoseTime>();
         }
 
         void OnTriggerEnter2D(Collider2D other)

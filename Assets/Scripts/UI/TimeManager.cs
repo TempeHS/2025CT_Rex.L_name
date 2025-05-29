@@ -14,7 +14,7 @@ public class TimeManager : MonoBehaviour
 
     void Start()
     {
-        levelManager = GetComponent<LevelManager>();
+        levelManager = FindObjectOfType<LevelManager>();
     }
     private void Update()
     {

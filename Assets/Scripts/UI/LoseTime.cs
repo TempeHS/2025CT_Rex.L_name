@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class LoseTime : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class LoseTime : MonoBehaviour
     {
         TimeLostDisplay.SetActive(false);
 
-        trapDamage = GetComponent<TrapDamage>();
+        trapDamage = FindObjectOfType<TrapDamage>();
 
     }
 
@@ -27,5 +28,6 @@ public class LoseTime : MonoBehaviour
     public void TimeLose()
     {
         TimeLostDisplay.SetActive(true);
+        TimeLostText.text = "- " + TimeLost;
     }
 }

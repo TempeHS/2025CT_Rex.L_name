@@ -177,7 +177,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.21698111, g: 0.21595761, b: 0.21595761, a: 1}
-  m_Intensity: 0.27
+  m_Intensity: 0
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -2189,7 +2189,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -459.75592, y: 169}
+  m_AnchoredPosition: {x: -459.75598, y: 169}
   m_SizeDelta: {x: -969.513, y: -548}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1258491381
