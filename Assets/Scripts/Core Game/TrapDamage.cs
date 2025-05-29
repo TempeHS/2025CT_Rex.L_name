@@ -16,7 +16,7 @@ public class TrapDamage : MonoBehaviour
         {
                 if(other.gameObject.CompareTag("Player"))
                 {
-                        loseTime.TimeLose();
+                        SceneManager.LoadScene("LoseMenu");
                 }
         }
 }
