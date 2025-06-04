@@ -5,18 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class TrapDamage : MonoBehaviour
 {
-        private LoseTime loseTime;
+        public TimeLostController timeLostController;
 
-        void Start()
-        {
-                loseTime = FindObjectOfType<LoseTime>();
-        }
+
 
         void OnTriggerEnter2D(Collider2D other)
         {
                 if(other.gameObject.CompareTag("Player"))
                 {
-                        SceneManager.LoadScene("LoseMenu");
+                        timeLostController.DisplayLostTime();
                 }
         }
+
 }

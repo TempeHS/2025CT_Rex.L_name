@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     private TrailRenderer trailRenderer;
     private Animator animator;
+    public TimeLostController timeLostController;
 
     [Header("Ground Check Variables")]
     [SerializeField] private Transform groundCheck;
@@ -32,6 +33,8 @@ public class PlayerMovement : MonoBehaviour
     {
         trailRenderer = GetComponent<TrailRenderer>();
         animator = GetComponent<Animator>();
+
+        timeLostController.TimeLostDisplay.SetActive(false);
     }
 
     void Update()

@@ -7,7 +7,7 @@ public class NextLevelTeleporter : MonoBehaviour
 {
     [SerializeField] private string sceneName;
     
-    private LevelDisplay levelDisplay;
+    public LevelDisplay levelDisplay;
 
     void Start()
     {
