@@ -16,6 +16,6 @@ public class TimeLostController : MonoBehaviour
     {
         TimeLostDisplay.SetActive(true);
 
-        TimeDisplay.text = "- " + timeLose.ToString();
+        TimeDisplay.text = "- " + timeLose;
     }
 }

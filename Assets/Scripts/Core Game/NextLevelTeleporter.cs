@@ -12,8 +12,14 @@ public class NextLevelTeleporter : MonoBehaviour
     void Start()
     {
         levelDisplay = GetComponent<LevelDisplay>();
-        levelDisplay.setLevelText();
+        
+        if (levelDisplay != null)
+        {
+            levelDisplay.setLevelText();
+        }
     }
+
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
@@ -24,7 +30,11 @@ public class NextLevelTeleporter : MonoBehaviour
 
     public void GoToScene(string sceneName)
     {
+        if (levelDisplay != null)
+        {
         levelDisplay.levelNumber++;
+        }
+
         SceneManager.LoadScene(sceneName);
     }
 }
