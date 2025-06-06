@@ -848,7 +848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: jumpingPower
-      value: 27
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: dashingVelocity
@@ -863,12 +863,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1258491383}
     - target: {fileID: 7169601389921344036, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
+      propertyPath: m_Mass
+      value: 1.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169601389921344036, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 6f85f82ec5d3e824eb0a0bcaa90d9fd7, type: 2}
     - target: {fileID: 7169601389921344036, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: m_GravityScale
-      value: 10
+      value: 7.79
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
