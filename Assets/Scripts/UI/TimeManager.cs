@@ -11,6 +11,7 @@ public class TimeManager : MonoBehaviour
     private bool active = true;
 
     public LevelManager levelManager;
+    public TimeLostController timeLostController;
 
     private void Update()
     {
@@ -50,5 +51,10 @@ public class TimeManager : MonoBehaviour
 
         TimeSpan t = TimeSpan.FromSeconds(currentTime);
         timerText.text = t.ToString(@"mm\:ss");
+    }
+
+    public void DeductTime()
+    {
+        
     }
 }

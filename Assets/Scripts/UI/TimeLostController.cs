@@ -9,13 +9,26 @@ public class TimeLostController : MonoBehaviour
     public GameObject TimeLostDisplay;
     public TextMeshProUGUI TimeDisplay;
 
+    private bool textActive = false;
     [SerializeField] public float timeLose;
+    [SerializeField] private float timeToAppear;
+    [SerializeField] private float timeToDisappear;
+
+    void Update()
+    {
+        if (textActive = true && (Time.time >= timeToDisappear))
+        {
+            TimeLostDisplay.SetActive(false);
+            textActive = false;
+        }
+    }
 
 
     public void DisplayLostTime()
     {
         TimeLostDisplay.SetActive(true);
-
-        TimeDisplay.text = "- " + timeLose;
+        textActive = true;
+        timeToDisappear = Time.time + timeToAppear;
+        TimeDisplay.text = "- 00: " + timeLose;
     }
 }

@@ -393,7 +393,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.78
-  m_Color: {r: 0.7028302, g: 1, b: 0.9586114, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.8160377, a: 0.90588236}
   m_Intensity: 0.35
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -460,9 +460,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1872146997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -260.4559, y: 147.49585}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 139.5441, y: -44.50415}
   m_SizeDelta: {x: 243.983, y: 86.366}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &867895565
@@ -512,8 +512,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 70
-  m_fontSizeBase: 70
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -548,7 +548,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 68.8166, w: 42.08619}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -577,6 +577,7 @@ MonoBehaviour:
   timerText: {fileID: 867895565}
   currentTime: 60
   levelManager: {fileID: 944528328}
+  timeLostController: {fileID: 1258491383}
 --- !u!1 &944528327
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,10 +657,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1872146997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 245.4, y: 165.68}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -104.5, y: -23.032013}
+  m_SizeDelta: {x: 150.679, y: 43.424}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1015687686
 MonoBehaviour:
@@ -708,8 +709,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 65
-  m_fontSizeBase: 65
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -843,15 +844,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: dashingTime
-      value: 0.4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: jumpingPower
-      value: 20
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: dashingVelocity
-      value: 12
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: groundLayer.m_Bits
@@ -865,6 +866,10 @@ PrefabInstance:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: 6f85f82ec5d3e824eb0a0bcaa90d9fd7, type: 2}
+    - target: {fileID: 7169601389921344036, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
+      propertyPath: m_GravityScale
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 8205596794501379934, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
@@ -2143,10 +2148,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1872146997}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -296.6167, y: 109.03225}
-  m_SizeDelta: {x: -529.5129, y: -327.6451}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 103.38336, y: -63}
+  m_SizeDelta: {x: 270.48712, y: 56.35489}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1258491381
 MonoBehaviour:
@@ -2177,8 +2182,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190335
+  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -2195,8 +2200,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2259,8 +2264,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeManager: {fileID: 867895567}
   TimeLostDisplay: {fileID: 1258491379}
-  TimeDisplay: {fileID: 867895565}
-  timeLose: 5
+  TimeDisplay: {fileID: 1258491381}
+  timeLose: 10
+  timeToAppear: 4
+  timeToDisappear: 4
 --- !u!1 &1383283373
 GameObject:
   m_ObjectHideFlags: 0
