@@ -25,7 +25,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashingVelocity = 18f;
     [SerializeField] private float dashingTime = 0.75f;
     private Vector2 dashingDirection;
-    private bool isDashing;
+    bool isDashing;
     private bool canDash = true;
     private bool dashInput;
 
