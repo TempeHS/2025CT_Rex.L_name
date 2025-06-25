@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: bf854386ba7bcdc46b42f897b24f2b2e
+guid: b7a0fdd152c6e4244a34460d225cd88e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -110,7 +110,49 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Player_0
+      name: jump (strawberry)_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b663227d01c31fe42a492d21aa70f349
+      internalID: -1359347273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump (strawberry)_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08896258c380c4e4b957358a071a3292
+      internalID: -1906260261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jump (strawberry)_2
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 13d3415783add9840b2639cf6a58bd79
-      internalID: -155780773
+      spriteID: a55ab62885f61df4ea819a5a383f4eb3
+      internalID: 586741375
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_1
+      name: jump (strawberry)_3
       rect:
         serializedVersion: 2
         x: 64
@@ -145,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0646eadd4a6bd0f46a25cc1bb0e54549
-      internalID: 1949302945
+      spriteID: fbd92e642d6090b47b907dfb9c67094e
+      internalID: -95803557
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Player_2
+      name: jump (strawberry)_4
       rect:
         serializedVersion: 2
         x: 0
@@ -166,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 895cb2a2264fdda4ebb03d02d338f61b
-      internalID: -1874127743
+      spriteID: 6b4b964766ab0b84094d53872d092a92
+      internalID: 1696775962
       vertices: []
       indices: 
       edges: []
@@ -183,9 +225,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Player_0: -155780773
-      Player_1: 1949302945
-      Player_2: -1874127743
+      jump (strawberry)_0: -1359347273
+      jump (strawberry)_1: -1906260261
+      jump (strawberry)_2: 586741375
+      jump (strawberry)_3: -95803557
+      jump (strawberry)_4: 1696775962
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

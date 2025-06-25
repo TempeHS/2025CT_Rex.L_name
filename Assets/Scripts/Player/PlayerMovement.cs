@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
     private TrailRenderer trailRenderer;
-    private Animator animator;
+    public Animator animator;
     public TimeLostController timeLostController;
 
     [Header("Ground Check Variables")]
@@ -41,6 +41,8 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         dashInput = Input.GetButtonDown("Dash");
+
+        animator.SetFloat("Speed", horizontal); 
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
