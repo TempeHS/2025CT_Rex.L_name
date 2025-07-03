@@ -41,6 +41,10 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         dashInput = Input.GetButtonDown("Dash");
+        transform.localScale = new Vector3(5f, 5f, 1f); 
+
+
+        animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
