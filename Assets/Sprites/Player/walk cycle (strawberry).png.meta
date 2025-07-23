@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 90
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 256
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -114,18 +114,18 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 128
-        height: 128
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e21e44f38fc83e848a65ed87a55f7fa7
-      internalID: 146419516
+      spriteID: 9380ba15da5f71d419ad5cdd9c1c6e75
+      internalID: 1578038828
       vertices: []
       indices: 
       edges: []
@@ -134,19 +134,19 @@ TextureImporter:
       name: walk cycle (strawberry)_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 128
-        height: 128
+        x: 64
+        y: 64
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fef4cbcd76a51de45954a287c9241edb
-      internalID: 1856193521
+      spriteID: aebd21cbe1deeb749900625e9058bbd0
+      internalID: 2050838744
       vertices: []
       indices: 
       edges: []
@@ -157,17 +157,17 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63f471c0f36102b42b92564b3b167a6a
-      internalID: -2103987072
+      spriteID: ec3cad7afea1071498fa2637ae606def
+      internalID: -1897784138
       vertices: []
       indices: 
       edges: []
@@ -176,19 +176,19 @@ TextureImporter:
       name: walk cycle (strawberry)_3
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 0
-        width: 128
-        height: 128
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3fd6fe6efff5fd488802243e6f2ef48
-      internalID: -518995094
+      spriteID: 52ed8090af8581842880d6d659307926
+      internalID: -1215963604
       vertices: []
       indices: 
       edges: []
@@ -204,10 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      walk cycle (strawberry)_0: 146419516
-      walk cycle (strawberry)_1: 1856193521
-      walk cycle (strawberry)_2: -2103987072
-      walk cycle (strawberry)_3: -518995094
+      walk cycle (strawberry)_0: 1578038828
+      walk cycle (strawberry)_1: 2050838744
+      walk cycle (strawberry)_2: -1897784138
+      walk cycle (strawberry)_3: -1215963604
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
