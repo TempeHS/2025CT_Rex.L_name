@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b7a0fdd152c6e4244a34460d225cd88e
+guid: cd598c9024d7e9b479abf4b9e4534509
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 256
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: jump (strawberry)_0
+      name: clock (collectable)_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 64
-        height: 64
+        x: 190
+        y: 1470
+        width: 250
+        height: 250
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b663227d01c31fe42a492d21aa70f349
-      internalID: -1359347273
+      spriteID: 780942bc4c5487747ab91adc50646f70
+      internalID: 1076129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump (strawberry)_1
+      name: clock (collectable)_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
+        x: 820
+        y: 1460
+        width: 250
+        height: 250
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08896258c380c4e4b957358a071a3292
-      internalID: -1906260261
+      spriteID: 0157ce794a69ebe4f9796de31c60d7a4
+      internalID: -970826370
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump (strawberry)_2
+      name: clock (collectable)_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 1450
+        y: 1430
+        width: 250
+        height: 250
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a55ab62885f61df4ea819a5a383f4eb3
-      internalID: 586741375
+      spriteID: a922d0c081a1a9b46acc272032196158
+      internalID: 210286007
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: jump (strawberry)_3
+      name: clock (collectable)_3
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 64
-        height: 64
+        x: 190
+        y: 810
+        width: 250
+        height: 250
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +187,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbd92e642d6090b47b907dfb9c67094e
-      internalID: -95803557
+      spriteID: 0ef0f585783849a409b603cf7e235493
+      internalID: 208379848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clock (collectable)_4
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 840
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c933da6dfb53cbc4cb9ef530cc34d58d
+      internalID: -1806040381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clock (collectable)_5
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 830
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 570e69e75c1841544a1e3f9ea556143a
+      internalID: -918446630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clock (collectable)_6
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 170
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d4cf0cfaab9fd14ebcfa56bfbc7b793
+      internalID: -1335903896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: clock (collectable)_7
+      rect:
+        serializedVersion: 2
+        x: 820
+        y: 180
+        width: 250
+        height: 250
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c51a5128687de40a3ba18c2f6a7f67
+      internalID: -124499952
       vertices: []
       indices: 
       edges: []
@@ -204,10 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      jump (strawberry)_0: -1359347273
-      jump (strawberry)_1: -1906260261
-      jump (strawberry)_2: 586741375
-      jump (strawberry)_3: -95803557
+      clock (collectable)_0: 1076129
+      clock (collectable)_1: -970826370
+      clock (collectable)_2: 210286007
+      clock (collectable)_3: 208379848
+      clock (collectable)_4: -1806040381
+      clock (collectable)_5: -918446630
+      clock (collectable)_6: -1335903896
+      clock (collectable)_7: -124499952
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
