@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour
     {
         trailRenderer = GetComponent<TrailRenderer>();
         animator = GetComponent<Animator>();
-
+        transform.localScale = new Vector3(8f, 8f, 1f); 
         timeLostController.TimeLostDisplay.SetActive(false);
     }
 
@@ -41,7 +41,7 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontal = Input.GetAxisRaw("Horizontal");
         dashInput = Input.GetButtonDown("Dash");
-        transform.localScale = new Vector3(5f, 5f, 1f); 
+        
 
 
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
