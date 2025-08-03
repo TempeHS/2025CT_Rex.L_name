@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpingPower = 15f;
     private float horizontal; 
+    bool jump = false;
 
 
     [Header("Dashing Variables")]
@@ -28,6 +30,9 @@ public class PlayerMovement : MonoBehaviour
     private bool isDashing;
     private bool canDash = true;
     private bool dashInput;
+
+    [Header("Events")]
+    public UnityEvent OnLandEvent;
 
     void Start()
     {
@@ -48,13 +53,16 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
+            jump = true;
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            animator.SetBool("IsJumping", true);
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f) 
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
+
 
         if (dashInput && canDash)
         {
@@ -81,6 +89,11 @@ public class PlayerMovement : MonoBehaviour
         Flip();
     }
 
+    public void OnLanding()
+    {
+        animator.SetBool("IsJumping", false);
+        
+    }
 
     private void FixedUpdate()
     {
