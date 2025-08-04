@@ -20,7 +20,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpingPower = 15f;
     private float horizontal; 
-    bool jump = false;
 
 
     [Header("Dashing Variables")]
@@ -47,15 +46,12 @@ public class PlayerMovement : MonoBehaviour
         horizontal = Input.GetAxisRaw("Horizontal");
         dashInput = Input.GetButtonDown("Dash");
         
-
-
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            jump = true;
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            animator.SetBool("IsJumping", true);
+            animator.SetTrigger("JumpTrigger");
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f) 
@@ -89,12 +85,6 @@ public class PlayerMovement : MonoBehaviour
         Flip();
     }
 
-    public void OnLanding()
-    {
-        animator.SetBool("IsJumping", false);
-        
-    }
-
     private void FixedUpdate()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
@@ -111,8 +101,9 @@ public class PlayerMovement : MonoBehaviour
 
     private bool IsGrounded()
     {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
+
 
 
     private void Flip()
