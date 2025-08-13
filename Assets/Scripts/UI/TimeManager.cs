@@ -13,6 +13,8 @@ public class TimeManager : MonoBehaviour
     public LevelManager levelManager;
     public TimeLostController timeLostController;
 
+    public clockCollect clockCollect;
+
     private void Update()
     {
         if (!active)
@@ -55,6 +57,12 @@ public class TimeManager : MonoBehaviour
 
     public void DeductTime()
     {
-        
+
+    }
+
+    public void addTime()
+    {
+        currentTime += 20f;
+        UpdateTimerUI();
     }
 }
