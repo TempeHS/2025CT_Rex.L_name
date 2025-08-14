@@ -12,8 +12,8 @@ public class TimeManager : MonoBehaviour
 
     public LevelManager levelManager;
     public TimeLostController timeLostController;
-
     public clockCollect clockCollect;
+    public TimeLostController timeLostController;
 
     private void Update()
     {
@@ -57,7 +57,8 @@ public class TimeManager : MonoBehaviour
 
     public void DeductTime()
     {
-
+        currentTime -= 10f;
+        UpdateTimerUI();
     }
 
     public void addTime()

@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class KeySystem : MonoBehaviour
 {
+      [SerializeField] GameObject KeyMain;
+
       void OnCollisionEnter2D(Collision2D col)
       {
-            Debug.Log("Working");
+            KeyMain.SetActive(false);
       }
 }
