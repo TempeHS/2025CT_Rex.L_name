@@ -177,7 +177,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.49056602, g: 0.47899607, b: 0.47899607, a: 1}
-  m_Intensity: 0.7
+  m_Intensity: 0.08
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -1176,10 +1176,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 867895565}
-  currentTime: 60
+  currentTime: 10
   levelManager: {fileID: 944528328}
-  timeLostController: {fileID: 1258491383}
   clockCollect: {fileID: 1619505883}
+  timeLostController: {fileID: 1258491383}
 --- !u!1 &944528327
 GameObject:
   m_ObjectHideFlags: 0
@@ -2487,6 +2487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df8206c6b1bfe204898dc72633f306ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  KeyMain: {fileID: 0}
 --- !u!65 &1594419898
 BoxCollider:
   m_ObjectHideFlags: 0

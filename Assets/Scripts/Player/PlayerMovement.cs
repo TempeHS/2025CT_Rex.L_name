@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundLayer;
     private bool isFacingRight = true;
 
+    public bool isGrounded = true;
+
 
     [Header("Movement Variables")]
     [SerializeField] private float speed = 5f;
@@ -37,28 +39,35 @@ public class PlayerMovement : MonoBehaviour
     {
         trailRenderer = GetComponent<TrailRenderer>();
         animator = GetComponent<Animator>();
-        transform.localScale = new Vector3(8f, 8f, 1f); 
+        transform.localScale = new Vector3(8f, 8f, 1f);
         timeLostController.TimeLostDisplay.SetActive(false);
+
+        animator.SetBool("isGrounded", true);
     }
 
     void Update()
     {
+        Debug.Log($"Speed: {Mathf.Abs(horizontal)}, IsGrounded: {IsGrounded()}"); // Debug log
+
         horizontal = Input.GetAxisRaw("Horizontal");
         dashInput = Input.GetButtonDown("Dash");
+
+        animator.SetBool("isGrounded", IsGrounded());
+        isGrounded = IsGrounded();
+        animator.SetBool("isGrounded", isGrounded); 
         
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            animator.SetTrigger("JumpTrigger");
+            animator.SetBool("isGrounded", IsGrounded());
         }
 
         if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f) 
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
-
 
         if (dashInput && canDash)
         {
@@ -80,7 +89,7 @@ public class PlayerMovement : MonoBehaviour
         if (IsGrounded())
         {
             canDash = true;
-        }
+        }   
 
         Flip();
     }
@@ -99,11 +108,10 @@ public class PlayerMovement : MonoBehaviour
     }
 
 
-    private bool IsGrounded()
+    public bool IsGrounded()
     {
-    return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
-
 
 
     private void Flip()
@@ -117,4 +125,3 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 } 
-

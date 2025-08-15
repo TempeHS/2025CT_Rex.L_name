@@ -7,11 +7,10 @@ using System;
 public class TimeManager : MonoBehaviour
 {
     [SerializeField] public TextMeshProUGUI timerText;
-    [SerializeField] public float currentTime = 60f;
+    [SerializeField] public float currentTime = 10f;
     private bool active = true;
 
     public LevelManager levelManager;
-    public TimeLostController timeLostController;
     public clockCollect clockCollect;
     public TimeLostController timeLostController;
 
@@ -49,6 +48,10 @@ public class TimeManager : MonoBehaviour
         else if (currentTime < 1)
         {
             timerText.color = Color.red;
+        }
+        else
+        {
+            timerText.color = Color.white;
         }
 
         TimeSpan t = TimeSpan.FromSeconds(currentTime);
