@@ -14,6 +14,10 @@ public class TimeManager : MonoBehaviour
     public clockCollect clockCollect;
     public TimeLostController timeLostController;
 
+    private void Awake()
+    {
+                DontDestroyOnLoad(this.gameObject);
+    }
     private void Update()
     {
         if (!active)

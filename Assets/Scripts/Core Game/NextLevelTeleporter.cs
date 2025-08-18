@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class NextLevelTeleporter : MonoBehaviour
 {
-    [SerializeField] private string sceneName;
+    [SerializeField] public string sceneName;
     
     public LevelDisplay levelDisplay;
+    public GameObject keyObjectOne;
+    public GameObject keyObjectTwo;
 
     void Start()
     {
@@ -22,10 +24,24 @@ public class NextLevelTeleporter : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (sceneName == "LevelOne")
         {
-            GoToScene(sceneName);
+            if (other.gameObject.CompareTag("Player") && keyObjectOne.activeInHierarchy == false)
+            {
+                Debug.Log("Working");
+                SceneManager.LoadScene("LevelTwo");
+            }
         }
+
+        if (sceneName == "LevelTwo")
+        {
+            if (other.gameObject.CompareTag("Player") && keyObjectOne && keyObjectTwo.activeInHierarchy == false)
+            {
+                Debug.Log("Working");
+                SceneManager.LoadScene("LevelThree");
+            }
+        }
+        
     }
 
     public void GoToScene(string sceneName)

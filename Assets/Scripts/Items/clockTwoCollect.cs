@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class KeySystem : MonoBehaviour
+public class clockTwoCollect : MonoBehaviour
 {
-      [SerializeField] GameObject KeyMain;
+      public TimeManager timeManager;
+
+      [SerializeField] GameObject ClockTwo;
 
       void OnTriggerEnter2D(Collider2D other)
       {
             if (other.gameObject.CompareTag("Player"))
             {
-                  KeyMain.SetActive(false);
+                  ClockTwo.SetActive(false);
+                  timeManager.addTime();
             }
       }
 }
