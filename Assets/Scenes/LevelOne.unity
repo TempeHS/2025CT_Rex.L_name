@@ -1178,7 +1178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timerText: {fileID: 867895565}
-  currentTime: 30
+  currentTime: 60
   levelManager: {fileID: 944528328}
   clockCollect: {fileID: 1619505883}
   timeLostController: {fileID: 1258491383}
@@ -1650,15 +1650,15 @@ PrefabInstance:
       objectReference: {fileID: 1198068792}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: dashingTime
-      value: 0.35
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: jumpingPower
-      value: 48
+      value: 46
       objectReference: {fileID: 0}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: dashingVelocity
-      value: 25
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: groundLayer.m_Bits
@@ -1670,7 +1670,7 @@ PrefabInstance:
       objectReference: {fileID: 1258491383}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -3662,7 +3662,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: LevelTwo
   levelDisplay: {fileID: 1015687688}
-  keyObject: {fileID: 1594419895}
+  keyObjectOne: {fileID: 1594419895}
 --- !u!212 &2140227492
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3724,7 +3724,7 @@ Transform:
   m_GameObject: {fileID: 2140227490}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -59.061703, y: -24.473145, z: 0.7801872}
+  m_LocalPosition: {x: -58.78, y: -24.49, z: 0.7801872}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -9,7 +9,6 @@ public class NextLevelTeleporter : MonoBehaviour
     
     public LevelDisplay levelDisplay;
     public GameObject keyObjectOne;
-    public GameObject keyObjectTwo;
 
     void Start()
     {
@@ -29,19 +28,9 @@ public class NextLevelTeleporter : MonoBehaviour
             if (other.gameObject.CompareTag("Player") && keyObjectOne.activeInHierarchy == false)
             {
                 Debug.Log("Working");
-                SceneManager.LoadScene("LevelTwo");
+                GoToScene("LevelTwo");
             }
         }
-
-        if (sceneName == "LevelTwo")
-        {
-            if (other.gameObject.CompareTag("Player") && keyObjectOne && keyObjectTwo.activeInHierarchy == false)
-            {
-                Debug.Log("Working");
-                SceneManager.LoadScene("LevelThree");
-            }
-        }
-        
     }
 
     public void GoToScene(string sceneName)

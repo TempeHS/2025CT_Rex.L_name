@@ -27,13 +27,12 @@ public class PlayerMovement : MonoBehaviour
     [Header("Dashing Variables")]
     [SerializeField] private float dashingVelocity = 18f;
     [SerializeField] private float dashingTime = 0.75f;
+    [SerializeField] private float dashingCooldown = 1f;
     private Vector2 dashingDirection;
     private bool isDashing;
     private bool canDash = true;
     private bool dashInput;
 
-    [Header("Events")]
-    public UnityEvent OnLandEvent;
 
     void Start()
     {
@@ -69,16 +68,10 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
-        if (dashInput && canDash)
+        if (Input.GetButtonDown() && canDash = true)
         {
-            isDashing = true;
-            canDash = false;
-            trailRenderer.emitting = true;
-            dashingDirection = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
-            StartCoroutine(StopDashing());
+            StartCoroutine(Dash());
         }
-
-        animator.SetBool("IsDashing", isDashing);
 
         if (isDashing)
         {
@@ -99,6 +92,23 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
+    private IEnumerator Dash()
+    {
+        canDash = false;
+        isDashing = true;
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0f;
+        rb.velocity = new Vector2(transform.localScale.x * dashingVelocity, 0f);
+        trailRenderer.emitting = true;
+        yield return new WaitForSeconds(dashingTime);
+        trailRenderer.emitting = false;
+        rb.gravityScale = originalGravity;
+        isDashing = false;
+        yield return new WaitForSeconds(dashingCooldown);
+        canDash = true;
+        animator.SetBool("IsDashing", isDashing);
+    }
+    
 
     private IEnumerator StopDashing()
     {
