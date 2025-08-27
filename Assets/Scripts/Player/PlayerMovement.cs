@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
-    private TrailRenderer trailRenderer;
+    private TrailRenderer tr;
     private Animator animator;
     public TimeLostController timeLostController;
 
@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        trailRenderer = GetComponent<TrailRenderer>();
+        tr = GetComponent<TrailRenderer>();
         animator = GetComponent<Animator>();
         transform.localScale = new Vector3(8f, 8f, 1f);
         timeLostController.TimeLostDisplay.SetActive(false);
@@ -46,10 +46,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        Debug.Log($"Speed: {Mathf.Abs(horizontal)}, IsGrounded: {IsGrounded()}"); // Debug log
+        Debug.Log($"Speed: {Mathf.Abs(horizontal)}, IsGrounded: {IsGrounded()}"); 
 
         horizontal = Input.GetAxisRaw("Horizontal");
         dashInput = Input.GetButtonDown("Dash");
+
 
         animator.SetBool("isGrounded", IsGrounded());
         isGrounded = IsGrounded();
@@ -57,63 +58,82 @@ public class PlayerMovement : MonoBehaviour
         
         animator.SetFloat("Speed", Mathf.Abs(horizontal));
 
+        if (isDashing)
+        {
+            return;
+        }
+
+        horizontal = Input.GetAxisRaw("Horizontal");
+
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            animator.SetBool("isGrounded", IsGrounded());
         }
 
-        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f) 
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
 
-        if (Input.GetButtonDown() && canDash = true)
+        if (Input.GetKeyDown(KeyCode.Q) && canDash)
         {
-            StartCoroutine(Dash());
-        }
+            float dashX = Input.GetAxisRaw("Horizontal");
+            float dashY = Input.GetAxisRaw("Vertical");
 
-        if (isDashing)
-        {
-            rb.velocity = dashingDirection.normalized * dashingVelocity;
-            return;
-        }
+            if (dashX == 0 && dashY == 0)
+            {
+                dashX = isFacingRight ? 1 : -1;
+            }
+
+            dashingDirection = new Vector2(dashX, dashY);
+            StartCoroutine(Dash());
+            }
+
 
         if (IsGrounded())
         {
             canDash = true;
-        }   
+        }  
 
         Flip();
     }
 
+
     private void FixedUpdate()
     {
+        if (isDashing)
+        {
+            return;
+        }
+
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
     }
 
     private IEnumerator Dash()
-    {
-        canDash = false;
-        isDashing = true;
-        float originalGravity = rb.gravityScale;
-        rb.gravityScale = 0f;
-        rb.velocity = new Vector2(transform.localScale.x * dashingVelocity, 0f);
-        trailRenderer.emitting = true;
-        yield return new WaitForSeconds(dashingTime);
-        trailRenderer.emitting = false;
-        rb.gravityScale = originalGravity;
-        isDashing = false;
-        yield return new WaitForSeconds(dashingCooldown);
-        canDash = true;
-        animator.SetBool("IsDashing", isDashing);
-    }
+{
+    canDash = false;
+    isDashing = true;
+    float originalGravity = rb.gravityScale;
+    rb.gravityScale = 0f;
+
+    rb.velocity = dashingDirection.normalized * dashingVelocity;
+
+    tr.emitting = true;
+    yield return new WaitForSeconds(dashingTime);
+    tr.emitting = false;
+
+    rb.gravityScale = originalGravity;
+    isDashing = false;
+    yield return new WaitForSeconds(dashingCooldown);
+    canDash = true;
+}
+
     
 
     private IEnumerator StopDashing()
     {
         yield return new WaitForSeconds(dashingTime);
-        trailRenderer.emitting = false;
+        tr.emitting = false;
         isDashing = false;
     }
 
