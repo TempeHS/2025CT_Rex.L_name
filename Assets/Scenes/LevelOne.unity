@@ -177,7 +177,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.49056602, g: 0.47899607, b: 0.47899607, a: 1}
-  m_Intensity: 1.81
+  m_Intensity: 0.96
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -1653,19 +1653,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1405798786260946760, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: m_Size.x
-      value: 0.1778027
+      value: 0.17251018
       objectReference: {fileID: 0}
     - target: {fileID: 1405798786260946760, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: m_Size.y
-      value: 0.37545562
+      value: 0.37069857
       objectReference: {fileID: 0}
     - target: {fileID: 1405798786260946760, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: m_Offset.x
-      value: 0.004736088
+      value: 0.0047360808
       objectReference: {fileID: 0}
     - target: {fileID: 1405798786260946760, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: m_Offset.y
-      value: 0.025495648
+      value: 0.02527868
       objectReference: {fileID: 0}
     - target: {fileID: 1405798786260946760, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: m_SpriteTilingProperty.newSize.x
@@ -2056,7 +2056,7 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1
+        time: 0.50149536
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2069,7 +2069,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.6037736, g: 0.41295835, b: 0.41295835, a: 1}
+      key0: {r: 0.8113208, g: 0.4018334, b: 0.4018334, a: 1}
       key1: {r: 0.9930078, g: 0.98964036, b: 0.98964036, a: 1}
       key2: {r: 1, g: 1, b: 1, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -3778,7 +3778,7 @@ GameObject:
   - component: {fileID: 2140227491}
   m_Layer: 0
   m_Name: nextLevelTeleporter
-  m_TagString: Untagged
+  m_TagString: NextLevelTeleporter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3797,7 +3797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneName: LevelTwo
   levelDisplay: {fileID: 1015687688}
-  keyObjectOne: {fileID: 1594419895}
+  keyMain: {fileID: 1594419895}
 --- !u!212 &2140227492
 SpriteRenderer:
   m_ObjectHideFlags: 0

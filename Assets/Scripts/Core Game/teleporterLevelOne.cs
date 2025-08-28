@@ -8,7 +8,7 @@ public class NextLevelTeleporter : MonoBehaviour
     [SerializeField] public string sceneName;
     
     public LevelDisplay levelDisplay;
-    public GameObject keyObjectOne;
+    public GameObject keyMain;
 
     void Start()
     {
@@ -23,14 +23,11 @@ public class NextLevelTeleporter : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (sceneName == "LevelOne")
-        {
-            if (other.gameObject.CompareTag("Player") && keyObjectOne.activeInHierarchy == false)
+            if (other.gameObject.CompareTag("Player") && keyMain.activeInHierarchy == false)
             {
                 Debug.Log("Working");
                 GoToScene("LevelTwo");
             }
-        }
     }
 
     public void GoToScene(string sceneName)
