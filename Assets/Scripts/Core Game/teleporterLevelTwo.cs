@@ -36,6 +36,6 @@ public class teleporterLevelTwo : MonoBehaviour
                   levelDisplay.levelNumber++;
             }
 
-            sceneManager.LoadScene(scenename);
+            SceneManager.LoadScene(sceneName);
       }
 }
