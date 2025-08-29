@@ -14,7 +14,7 @@ public class teleporterLevelTwo : MonoBehaviour
       void Start()
       {
             levelDisplay = GetComponent<LevelDisplay>();
-      
+
             if (levelDisplay != null)
             {
                   levelDisplay.setLevelText();
@@ -25,7 +25,17 @@ public class teleporterLevelTwo : MonoBehaviour
       {
             if (other.gameObject.CompareTag("Player") && keyOne && keyTwo.activeInHierarchy == false)
             {
-                  // GoToScene("LevelThree");
+                  GoToScene("LevelThree");
             }
+      }
+
+      public void GoToScene(string sceneName)
+      {
+            if (levelDisplay != null)
+            {
+                  levelDisplay.levelNumber++;
+            }
+
+            sceneManager.LoadScene(scenename);
       }
 }
