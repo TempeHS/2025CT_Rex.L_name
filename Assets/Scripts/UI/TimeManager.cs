@@ -14,6 +14,8 @@ public class TimeManager : MonoBehaviour
     public clockCollect clockCollect;
     public TimeLostController timeLostController;
 
+    [SerializeField] private timeSave timeSO;
+
     private void Update()
     {
         if (!active)
@@ -25,6 +27,7 @@ public class TimeManager : MonoBehaviour
         if (currentTime <= 0)
         {
             StopTimer();
+
             levelManager.GameLost();
         }
     }
@@ -33,7 +36,7 @@ public class TimeManager : MonoBehaviour
     public void StopTimer()
     {
         active = false;
-        currentTime = 0f;
+        timeSO = 0f;
 
         UpdateTimerUI();
     }
@@ -41,11 +44,11 @@ public class TimeManager : MonoBehaviour
 
     private void UpdateTimerUI()
     {
-        if (currentTime > 0 && currentTime < 6)
+        if (timeSO > 0 && timeSO < 6)
         {
             timerText.color = Color.yellow;
         }
-        else if (currentTime < 1)
+        else if (timeSO < 1)
         {
             timerText.color = Color.red;
         }
@@ -54,19 +57,19 @@ public class TimeManager : MonoBehaviour
             timerText.color = Color.white;
         }
 
-        TimeSpan t = TimeSpan.FromSeconds(currentTime);
+        TimeSpan t = TimeSpan.FromSeconds(timeSO);
         timerText.text = t.ToString(@"mm\:ss");
     }
 
     public void DeductTime()
     {
-        currentTime -= 10f;
+        timeSO -= 10f;
         UpdateTimerUI();
     }
 
     public void addTime()
     {
-        currentTime += 20f;
+        timeSO += 15f;
         UpdateTimerUI();
     }
 }
