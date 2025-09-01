@@ -7,7 +7,6 @@ using System;
 public class TimeManager : MonoBehaviour
 {
     [SerializeField] public TextMeshProUGUI timerText;
-    [SerializeField] public float currentTime = 10f;
     private bool active = true;
 
     public LevelManager levelManager;
@@ -16,18 +15,25 @@ public class TimeManager : MonoBehaviour
 
     [SerializeField] private timeSave timeSO;
 
+    void Start()
+    {
+        timerText.text = timeSO.Time + "";
+        // timeSO.Time = 60f;
+    }
+
+
     private void Update()
     {
         if (!active)
             return;
 
-        currentTime -= Time.deltaTime;
+        timeSO.Time -= Time.deltaTime;
         UpdateTimerUI();
 
-        if (currentTime <= 0)
+        if (timeSO.Time <= 0)
         {
             StopTimer();
-
+            timeSO.Time = 60f;
             levelManager.GameLost();
         }
     }
@@ -36,7 +42,7 @@ public class TimeManager : MonoBehaviour
     public void StopTimer()
     {
         active = false;
-        timeSO = 0f;
+        timeSO.Time  = 0f;
 
         UpdateTimerUI();
     }
@@ -44,11 +50,11 @@ public class TimeManager : MonoBehaviour
 
     private void UpdateTimerUI()
     {
-        if (timeSO > 0 && timeSO < 6)
+        if (timeSO.Time > 0 && timeSO.Time < 6)
         {
             timerText.color = Color.yellow;
         }
-        else if (timeSO < 1)
+        else if (timeSO.Time < 1)
         {
             timerText.color = Color.red;
         }
@@ -57,19 +63,19 @@ public class TimeManager : MonoBehaviour
             timerText.color = Color.white;
         }
 
-        TimeSpan t = TimeSpan.FromSeconds(timeSO);
+        TimeSpan t = TimeSpan.FromSeconds(timeSO.Time);
         timerText.text = t.ToString(@"mm\:ss");
     }
 
     public void DeductTime()
     {
-        timeSO -= 10f;
+        timeSO.Time -= 10f;
         UpdateTimerUI();
     }
 
     public void addTime()
     {
-        timeSO += 15f;
+        timeSO.Time += 15f;
         UpdateTimerUI();
     }
 }

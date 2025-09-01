@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4763dc7c13ad08a47bf66abb539fcb7a, type: 3}
   m_Name: timeSO
   m_EditorClassIdentifier: 
-  _time: 0
+  _time: 58.03453

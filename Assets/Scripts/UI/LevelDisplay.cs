@@ -6,7 +6,8 @@ using TMPro;
 public class LevelDisplay : MonoBehaviour
 {
     public TextMeshProUGUI levelDisplay;
-    public NextLevelTeleporter nextLevelTeleporter;
+    public teleporterLevelOne teleporterLevelOne;
+    public teleporterLevelTwo teleporterLevelTwo;
     public int levelNumber = 1;
 
 
