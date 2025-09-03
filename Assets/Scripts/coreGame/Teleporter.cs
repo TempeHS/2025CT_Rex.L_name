@@ -10,6 +10,7 @@ public class Teleporter : MonoBehaviour
       [Header("Key Requirements")]
       [SerializeField] private List<GameObject> requiredKeys;
 
+      [SerializeField] Animator transitionAnim;
       private LevelDisplay levelDisplay;
 
       void Start()
@@ -18,7 +19,7 @@ public class Teleporter : MonoBehaviour
 
             if (levelDisplay != null)
             {
-            levelDisplay.setLevelText();
+                  levelDisplay.setLevelText();
             }
       }
 
@@ -26,8 +27,8 @@ public class Teleporter : MonoBehaviour
       {
             if (other.CompareTag("Player") && AllKeysCollected())
             {
-            Debug.Log($"Teleporting to {targetSceneName}");
-            GoToScene();
+                  Debug.Log($"Teleporting to {targetSceneName}");
+                  GoToScene();
             }
       }
 
@@ -35,10 +36,10 @@ public class Teleporter : MonoBehaviour
       {
             foreach (GameObject key in requiredKeys)
             {
-            if (key != null && key.activeInHierarchy)
-            {
-                return false; // Key still active, not collected
-            }
+                  if (key != null && key.activeInHierarchy)
+                  {
+                        return false; // Key still active, not collected
+                  }
             }
             return true;
       }
@@ -47,9 +48,13 @@ public class Teleporter : MonoBehaviour
       {
             if (levelDisplay != null)
             {
-            levelDisplay.levelNumber++;
+                  levelDisplay.levelNumber++;
             }
+            
+      }
 
+      IEnumerator LoadLevel()
+      {
             SceneManager.LoadScene(targetSceneName);
-    }
+      }
 }
