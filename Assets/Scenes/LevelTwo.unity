@@ -177,7 +177,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.49056602, g: 0.47899607, b: 0.47899607, a: 1}
-  m_Intensity: 0.73
+  m_Intensity: 0
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -849,6 +849,68 @@ Transform:
   - {fileID: 267413668}
   m_Father: {fileID: 177722586}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &567891009
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6550572451493446075, guid: 3990c3392654f6844bf440a379856b02, type: 3}
+      propertyPath: m_Name
+      value: SceneTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941866301358105934, guid: 3990c3392654f6844bf440a379856b02, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -8.280706
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941866301358105934, guid: 3990c3392654f6844bf440a379856b02, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.5356803
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941866301358105934, guid: 3990c3392654f6844bf440a379856b02, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.5799577
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941866301358105934, guid: 3990c3392654f6844bf440a379856b02, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941866301358105934, guid: 3990c3392654f6844bf440a379856b02, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941866301358105934, guid: 3990c3392654f6844bf440a379856b02, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941866301358105934, guid: 3990c3392654f6844bf440a379856b02, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941866301358105934, guid: 3990c3392654f6844bf440a379856b02, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941866301358105934, guid: 3990c3392654f6844bf440a379856b02, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941866301358105934, guid: 3990c3392654f6844bf440a379856b02, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3990c3392654f6844bf440a379856b02, type: 3}
+--- !u!95 &567891010 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4741198649466028051, guid: 3990c3392654f6844bf440a379856b02, type: 3}
+  m_PrefabInstance: {fileID: 567891009}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &626184336
 GameObject:
   m_ObjectHideFlags: 0
@@ -2144,7 +2206,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   levelDisplay: {fileID: 1015687686}
-  teleporter: {fileID: 0}
+  teleporter: {fileID: 2140227495}
   levelNumber: 1
 --- !u!1001 &1075421212
 PrefabInstance:
@@ -65076,10 +65138,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3bd2aced4cab0334a81d3bd3c7432856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetSceneName: LevelThree
   requiredKeys:
   - {fileID: 1594419895}
   - {fileID: 626184336}
+  transitionAnim: {fileID: 567891010}
+  levelDisplay: {fileID: 1015687688}
 --- !u!61 &2140227496
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -65130,6 +65193,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2014832382}
+  - {fileID: 567891009}
   - {fileID: 944528329}
   - {fileID: 709567368}
   - {fileID: 1315571042}

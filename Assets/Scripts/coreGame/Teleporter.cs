@@ -1,17 +1,15 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Teleporter : MonoBehaviour
 {
-      [Header("Scene Settings")]
-      [SerializeField] private string targetSceneName;
-
       [Header("Key Requirements")]
       [SerializeField] private List<GameObject> requiredKeys;
 
       [SerializeField] Animator transitionAnim;
-      private LevelDisplay levelDisplay;
+      public LevelDisplay levelDisplay;
 
       void Start()
       {
@@ -27,8 +25,8 @@ public class Teleporter : MonoBehaviour
       {
             if (other.CompareTag("Player") && AllKeysCollected())
             {
-                  Debug.Log($"Teleporting to {targetSceneName}");
-                  GoToScene();
+                  // Debug.Log($"Teleporting to {targetSceneName}");
+                  StartCoroutine(LoadLevel());
             }
       }
 
@@ -38,23 +36,22 @@ public class Teleporter : MonoBehaviour
             {
                   if (key != null && key.activeInHierarchy)
                   {
-                        return false; // Key still active, not collected
+                        return false; 
                   }
             }
             return true;
       }
 
-      private void GoToScene()
+      private IEnumerator LoadLevel()
       {
-            if (levelDisplay != null)
+            transitionAnim.SetTrigger("End");
+            yield return new WaitForSeconds(1f);
+
+            if (levelDisplay.levelNumber != null)
             {
                   levelDisplay.levelNumber++;
             }
-            
-      }
-
-      IEnumerator LoadLevel()
-      {
-            SceneManager.LoadScene(targetSceneName);
+            transitionAnim.SetTrigger("Start");
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
       }
 }
