@@ -21,8 +21,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement Variables")]
     [SerializeField] private float speed = 5f;
     [SerializeField] private float jumpingPower = 15f;
-    private float horizontal; 
-
+    private float horizontal;
 
     [Header("Dashing Variables")]
     [SerializeField] private float dashingVelocity = 18f;

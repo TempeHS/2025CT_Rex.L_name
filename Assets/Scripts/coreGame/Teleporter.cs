@@ -13,7 +13,7 @@ public class Teleporter : MonoBehaviour
 
       void Start()
       {
-            levelDisplay = GetComponent<LevelDisplay>();
+            //levelDisplay = GetComponent<LevelDisplay>();
 
             if (levelDisplay != null)
             {
@@ -36,7 +36,7 @@ public class Teleporter : MonoBehaviour
             {
                   if (key != null && key.activeInHierarchy)
                   {
-                        return false; 
+                        return false;
                   }
             }
             return true;
@@ -46,11 +46,7 @@ public class Teleporter : MonoBehaviour
       {
             transitionAnim.SetTrigger("End");
             yield return new WaitForSeconds(1f);
-
-            if (levelDisplay.levelNumber != null)
-            {
-                  levelDisplay.levelNumber++;
-            }
+            levelDisplay.levelNumber++;
             transitionAnim.SetTrigger("Start");
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
       }
