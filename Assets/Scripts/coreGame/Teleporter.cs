@@ -13,7 +13,6 @@ public class Teleporter : MonoBehaviour
 
       void Start()
       {
-            //levelDisplay = GetComponent<LevelDisplay>();
 
             if (levelDisplay != null)
             {
@@ -21,14 +20,15 @@ public class Teleporter : MonoBehaviour
             }
       }
 
+
       void OnTriggerEnter2D(Collider2D other)
       {
             if (other.CompareTag("Player") && AllKeysCollected())
             {
-                  // Debug.Log($"Teleporting to {targetSceneName}");
                   StartCoroutine(LoadLevel());
             }
       }
+
 
       private bool AllKeysCollected()
       {
@@ -41,6 +41,7 @@ public class Teleporter : MonoBehaviour
             }
             return true;
       }
+
 
       private IEnumerator LoadLevel()
       {
