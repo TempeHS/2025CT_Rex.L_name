@@ -12,6 +12,7 @@ public class TimeManager : MonoBehaviour
     public LevelManager levelManager;
     public clockCollect clockCollect;
     public TimeLostController timeLostController;
+    public PlayerMovement playerMovement;
 
     [SerializeField] private timeSave timeSO;
 
@@ -34,15 +35,22 @@ public class TimeManager : MonoBehaviour
         {
             StopTimer();
             timeSO.Time = 60f;
-            levelManager.GameLost();
+            playerMovement.OnDied?.Invoke();
+            StartCoroutine(HandleGameLost());
         }
+    }
+
+    private IEnumerator HandleGameLost()
+    {
+        yield return new WaitForSeconds(4f);
+        levelManager.GameLost();
     }
 
 
     public void StopTimer()
     {
         active = false;
-        timeSO.Time  = 0f;
+        timeSO.Time = 0f;
 
         UpdateTimerUI();
     }

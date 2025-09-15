@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
     private TrailRenderer tr;
     private Animator animator;
     public TimeLostController timeLostController;
+    public TimeManager timeManager;
+
+    public UnityEvent OnDied;   
 
     [Header("Ground Check Variables")]
     [SerializeField] private Transform groundCheck;
@@ -27,6 +30,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float dashingVelocity = 18f;
     [SerializeField] private float dashingTime = 0.75f;
     [SerializeField] private float dashingCooldown = 1f;
+
+    
     private Vector2 dashingDirection;
     private bool isDashing;
     private bool canDash = true;

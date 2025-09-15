@@ -1485,6 +1485,7 @@ MonoBehaviour:
   levelManager: {fileID: 944528328}
   clockCollect: {fileID: 1619505883}
   timeLostController: {fileID: 1258491383}
+  playerMovement: {fileID: 1198068793}
   timeSO: {fileID: 11400000, guid: 06d9426dc2317ec409b85692df0dc6f5, type: 2}
 --- !u!1 &925823736
 GameObject:
@@ -2353,6 +2354,10 @@ PrefabInstance:
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
+      propertyPath: timeManager
+      value: 
+      objectReference: {fileID: 867895567}
+    - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: jumpingPower
       value: 46
       objectReference: {fileID: 0}
@@ -2373,12 +2378,32 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1258491383}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1198068792}
+    - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetTrigger
       objectReference: {fileID: 0}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2393,8 +2418,20 @@ PrefabInstance:
       value: OnLanding
       objectReference: {fileID: 0}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.Animator, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: IsDead
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PlayerMovement, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
+      propertyPath: OnDied.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6877332466312882432, guid: 03ed4240f1dbcb2489d1f45d1bd6d6b2, type: 3}
       propertyPath: OnLandEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
