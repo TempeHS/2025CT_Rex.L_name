@@ -6,6 +6,7 @@ TagManager:
   tags:
   - NextLevelTeleporter
   - Trap
+  - MovingPlatform
   layers:
   - Default
   - TransparentFX
