@@ -1,14 +1,16 @@
-# Project Title
-
-My Game
-
-Simple overview of use/purpose.
+# Berry Bounce 
 
 ## Description
+Berry Bounce is a 2D platformer made in Unity that tests the player's ability to reach the end level whilst having enough time to complete all objectives. There is no traditional healthbar, rather the player's time will slowly decrease and once it reaches zero, the player loses. 
 
-An in-depth paragraph about your project and overview of use.
-
-## Getting Started
+## Controls
+#### Movement
+| Key Bind | Action |
+| ----------- | ----------- |
+| A | Move Left |
+| D | Move Right |
+| Q | Dash |
+| Spacebar | Jump |
 
 ### Dependencies
 
