@@ -1,10 +1,17 @@
-# Berry Bounce 
+# <h1 align=center> :grapes: Berry Bounce :strawberry:
+
+---
 
 ## Description
 Berry Bounce is a 2D platformer made in Unity that tests the player's ability to reach the end level whilst having enough time to complete all objectives. There is no traditional healthbar, rather the player's time will slowly decrease and once it reaches zero, the player loses. 
 
+### Objective
+Reach the end of all the levels whilst keeping your current time in mind. Some levels may require collecting keys scattered around the map to progress to the next level. There are also collectables around each map shaped as clocks which can add to your current time so try to look for them as your time runs low. 
+
 ## Controls
-#### Movement
+
+#### Keyboard
+
 | Key Bind | Action |
 | ----------- | ----------- |
 | A | Move Left |
@@ -12,52 +19,22 @@ Berry Bounce is a 2D platformer made in Unity that tests the player's ability to
 | Q | Dash |
 | Spacebar | Jump |
 
-### Dependencies
+#### Controller
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+| Key Bind | Action |
+| ----------- | ----------- |
+| . | . |
+| . | . |
+| . | . |
+| . | . |
 
-### Installing
+## Features
+- **UI Display Elements**
+- **Collectables**
+- **Moving Platforms**
+- **Themed Environments**
+#### Timer UI Display
+![A screenshot showing the timer UI element in Berry Bounce](image.png)
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
 
-### Executing program
 
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
-
-## Authors
-
-Contributors names and contact info
-
-ex. Mr Jones
-ex. [@benpaddlejones](https://github.com/benpaddlejones)
-
-## Version History
-
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]() or see [branch]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [Github md syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
-* [TempeHS Unity template](https://github.com/TempeHS/TempeHS_Unity_DevContainer)
