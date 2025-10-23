@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class timeSave : ScriptableObject
 {
-    [SerializeField] 
+    [SerializeField]
     private float _time;
     public float Time
     {

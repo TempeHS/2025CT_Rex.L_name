@@ -8,7 +8,6 @@ public class TimeManager : MonoBehaviour
 {
     [SerializeField] public TextMeshProUGUI timerText;
     private bool active = true;
-
     public LevelManager levelManager;
     public clockCollect clockCollect;
     public TimeLostController timeLostController;
