@@ -5,12 +5,15 @@
 ## Description
 Berry Bounce is a 2D platformer made in Unity that tests the player's ability to reach the end level whilst having enough time to complete all objectives. There is no traditional healthbar, rather the player's time will slowly decrease and once it reaches zero, the player loses. 
 
+
 ### Objective
 Reach the end of all the levels whilst keeping your current time in mind. Some levels may require collecting keys scattered around the map to progress to the next level. There are also collectables around each map shaped as clocks which can add to your current time so try to look for them as your time runs low. 
 
+---
+
 ## Controls
 
-#### Keyboard
+#### Keyboard     
 
 | Key Bind | Action |
 | ----------- | ----------- |
@@ -27,14 +30,22 @@ Reach the end of all the levels whilst keeping your current time in mind. Some l
 | . | . |
 | . | . |
 | . | . |
-
+---
 ## Features
 - **UI Display Elements**
 - **Collectables**
 - **Moving Platforms**
 - **Themed Environments**
-#### Timer UI Display
+### Timer Display UI
+#### Static
 ![A screenshot showing the timer UI element in Berry Bounce](image.png)
+#### Counting Down
+![A GIF file showing the countdown of the timer as time passes](timerCountdown.gif)
 
+### Level Display UI
+![alt text](levelRefresh.gif)
 
-
+### Collectables
+| Key Collectable | Clock Collectable |
+| ----------- | ----------- |
+| ![alt text](keyAnimation.gif)| ![alt text](clockCollectable-1.gif) |
