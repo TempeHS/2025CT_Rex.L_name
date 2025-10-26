@@ -1,6 +1,5 @@
 # <p align=center> :grapes:  Berry Bounce  :strawberry:
 
----
 <!-- Table of Contents -->
 - [Description](#description)
 - [Objective](#objective)
@@ -14,6 +13,7 @@
   - [Moving Platforms](#moving-platforms)
   - [Themed Environments](#themed-environments)
   - [Smooth Level Transitions](#smooth-level-transitions)
+- [Player](#player)
 
 ---
 
@@ -96,3 +96,9 @@ There have also been some features that were not implemented in time but were im
 
 ### Smooth Level Transitions
 ![alt text](levelTransition.gif)
+
+## Player
+### Animations
+| Player Idle | Player Run |
+| ----------- | ----------- |
+| ![alt text](playerIdleAnimation-1.gif) | ![alt text](playerRunAnimation.gif) | 
