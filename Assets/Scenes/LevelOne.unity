@@ -177,7 +177,7 @@ MonoBehaviour:
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
   m_Color: {r: 0.49056602, g: 0.47899607, b: 0.47899607, a: 1}
-  m_Intensity: 1.25
+  m_Intensity: 0.06
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
   m_ApplyToSortingLayers: 00000000
@@ -1050,6 +1050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeManager: {fileID: 867895567}
   trapDamage: {fileID: 0}
+  timeData: {fileID: 0}
 --- !u!4 &944528329
 Transform:
   m_ObjectHideFlags: 0
