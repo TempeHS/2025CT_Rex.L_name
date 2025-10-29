@@ -13,7 +13,9 @@
   - [Moving Platforms](#moving-platforms)
   - [Themed Environments](#themed-environments)
   - [Smooth Level Transitions](#smooth-level-transitions)
+  - [Main Menu and Death Screen]()
 - [Player](#player)
+  - [Animatons](#animations)
 
 ---
 
@@ -30,7 +32,7 @@ The development process was full of bugs and errors with many issues arising in 
 
 - **Screen Tearing (Fixable with sprite atlas)**
 - **Platform Collider Shapes**
-- **Player Animations (Sprites being different sizes)**
+- **Player Animations (Sprites being different sizes and blurry)**
 - **Level Display not updating properly sometimes**
 
 There have also been some features that were not implemented in time but were imagined to be within the game, also outlined below.
@@ -39,7 +41,6 @@ There have also been some features that were not implemented in time but were im
 - **Enemy AI**
 - **More Abilities, Powerups and Collectables**
 - **Better Movement Physics**
-
 
 ---
 
@@ -97,8 +98,17 @@ There have also been some features that were not implemented in time but were im
 ### Smooth Level Transitions
 ![alt text](levelTransition.gif)
 
+### Main Menu 
+
+
 ## Player
 ### Animations
 | Player Idle | Player Run |
 | ----------- | ----------- |
-| ![alt text](playerIdleAnimation-1.gif) | ![alt text](playerRunAnimation.gif) | 
+| ![alt text](playerIdleAnimation-1.gif) | ![alt text](playerRunAnimation.gif) |
+
+#### Player Jump
+![alt text](playerJumpAnimation.gif)
+
+#### Player Death
+![alt text](playerDeathAnimation.gif)
