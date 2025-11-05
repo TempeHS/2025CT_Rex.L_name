@@ -13,9 +13,9 @@
   - [Moving Platforms](#moving-platforms)
   - [Themed Environments](#themed-environments)
   - [Smooth Level Transitions](#smooth-level-transitions)
-  - [Main Menu and Death Screen]()
+  - [Main Menu and Death Screen](#main-menu)
 - [Player](#player)
-  - [Animatons](#animations)
+  - [Animations](#animations)
 
 ---
 
@@ -41,6 +41,8 @@ There have also been some features that were not implemented in time but were im
 - **Enemy AI**
 - **More Abilities, Powerups and Collectables**
 - **Better Movement Physics**
+- **More Levels**
+- **Sound Effects and Music**
 
 ---
 
@@ -75,7 +77,7 @@ There have also been some features that were not implemented in time but were im
 #### Static
 ![A screenshot showing the timer UI element in Berry Bounce](image.png)
 #### Counting Down
-![A GIF file showing the countdown of the timer as time passes](timerCountdown.gif)
+![alt text](timerCountdown.gif)
 
 ### Level Display UI
 ![alt text](levelRefresh.gif)
@@ -83,7 +85,7 @@ There have also been some features that were not implemented in time but were im
 ### Collectables
 | Key Collectable | Clock Collectable |
 | ----------- | ----------- |
-| ![alt text](keyAnimation.gif)| ![alt text](clockCollectable-2.gif) |
+| ![alt text](keyAnimation.gif)| ![alt text](clockCollectable-1.gif) |
 
 ### Moving Platforms
 ![alt text](movingPlatform.gif)
@@ -93,13 +95,12 @@ There have also been some features that were not implemented in time but were im
 ![alt text](image-1.png)
 #### Snowy Forest
 ![alt text](image-2.png)
-#### Cave Environment [TODO]
 
 ### Smooth Level Transitions
 ![alt text](levelTransition.gif)
 
 ### Main Menu 
-
+![alt text](<Screenshot 2025-11-05 122844.png>)
 
 ## Player
 ### Animations
@@ -109,6 +110,6 @@ There have also been some features that were not implemented in time but were im
 
 #### Player Jump
 ![alt text](playerJumpAnimation.gif)
-
+  
 #### Player Death
 ![alt text](playerDeathAnimation.gif)
