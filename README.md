@@ -3,10 +3,12 @@
 <!-- Table of Contents -->
 - [Description](#description)
 - [Objective](#objective)
+- [Development Process](#development-process)
+- [Software Used](#software-used)
 - [Controls](#controls)
   - [Keyboard](#keyboard)
   - [Controller](#controller)
-- [Current Features](#features)
+- [Game Elements](#game-elements)
   - [Timer Display](#timer-display-ui)
   - [Level Display](#level-display-ui)
   - [Collectables](#collectables)
@@ -17,13 +19,14 @@
 - [Player](#player)
   - [Animations](#animations)
 
+
 ---
 
 ## Description
 Berry Bounce is a 2D platformer made in Unity that tests the player's ability to reach the end level whilst having enough time to complete all objectives. There is no traditional healthbar, rather the player's time will slowly decrease and once it reaches zero, the player loses. The game will increase in difficulty as you progress through levels with some levels introducing new mechanics such as moving platforms. Throughout the entire game the player's vision will be limited with only the immediate surroundings being visible.   
 
 
-### Objective
+### :dart: Objective
 Reach the end of all the levels whilst keeping your current time in mind. Some levels may require collecting keys scattered around the map to progress to the next level. There are also collectables around each map shaped as clocks which can add to your current time so try to look for them as your time runs low. Once you are sure you have collected all keys within a level, you should find the exit which looks something like a door/tunnel. 
 
 
@@ -44,11 +47,18 @@ There have also been some features that were not implemented in time but were im
 - **More Levels**
 - **Sound Effects and Music**
 
+### Software Used
+#### Visual Studio Code
+![alt text](image-3.png)
+
+#### Unity Game Engine
+![alt text](image-4.png)
+
 ---
 
 ## Controls
 
-#### Keyboard     
+#### :computer: Keyboard     
 
 | Key Bind | Action |
 | ----------- | ----------- |
@@ -57,7 +67,7 @@ There have also been some features that were not implemented in time but were im
 | <kbd>Q</kbd> | Dash |
 | <kbd>Spacebar</kbd> | Jump |
 
-#### Controller
+#### :video_game: Controller
 
 | Key Bind | Action |
 | ----------- | ----------- |
@@ -65,15 +75,13 @@ There have also been some features that were not implemented in time but were im
 | . | . |
 | . | . |
 | . | . |
+
 ---
 
-## Current Features
-- [UI Display Elements](#timer-display-ui)
-- [Collectables](#collectables)
-- [Moving Platforms](#moving-platforms)
-- [Themed Environments](#themed-environments)
-- [Smooth Level Transitions](#smooth-level-transitions)
+## Game Elements
+
 ### Timer Display UI
+
 #### Static
 ![A screenshot showing the timer UI element in Berry Bounce](image.png)
 #### Counting Down
@@ -106,10 +114,9 @@ There have also been some features that were not implemented in time but were im
 ### Animations
 | Player Idle | Player Run |
 | ----------- | ----------- |
-| ![alt text](playerIdleAnimation-1.gif) | ![alt text](playerRunAnimation.gif) |
+| ![alt text](playerIdleAnimation.gif) | ![alt text](playerRunAnimation.gif) |
 
 #### Player Jump
 ![alt text](playerJumpAnimation.gif)
-  
 #### Player Death
 ![alt text](playerDeathAnimation.gif)
