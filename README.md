@@ -22,6 +22,11 @@
 
 ---
 
+## Game Walkthrough
+
+https://github.com/user-attachments/assets/d93eaf9d-fbdf-497a-bdd0-a693743b8305
+
+
 ## Description
 Berry Bounce is a 2D platformer made in Unity that tests the player's ability to reach the end level whilst having enough time to complete all objectives. There is no traditional healthbar, rather the player's time will slowly decrease and once it reaches zero, the player loses. The game will increase in difficulty as you progress through levels with some levels introducing new mechanics such as moving platforms. Throughout the entire game the player's vision will be limited with only the immediate surroundings being visible.   
 
