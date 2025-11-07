@@ -122,3 +122,5 @@ There have also been some features that were not implemented in time but were im
 ![alt text](playerJumpAnimation.gif)
 #### Player Death
 ![alt text](playerDeathAnimation.gif)
+
+## [All Scripts](https://github.com/TempeHS/2025CT_Rex.L_name/tree/main/Assets/Scripts)
