@@ -6,8 +6,6 @@
 - [Development Process](#development-process)
 - [Software Used](#software-used)
 - [Controls](#controls)
-  - [Keyboard](#keyboard)
-  - [Controller](#controller)
 - [Game Elements](#game-elements)
   - [Timer Display](#timer-display-ui)
   - [Level Display](#level-display-ui)
@@ -18,15 +16,16 @@
   - [Main Menu and Death Screen](#main-menu)
 - [Player](#player)
   - [Animations](#animations)
+- [Scripts](#all-scripts)
 
 
 ---
 
 ## Description
-Berry Bounce is a 2D platformer made in Unity that tests the player's ability to reach the end level whilst having enough time to complete all objectives. There is no traditional healthbar, rather the player's time will slowly decrease and once it reaches zero, the player loses. The game will increase in difficulty as you progress through levels with some levels introducing new mechanics such as moving platforms. Throughout the entire game the player's vision will be limited with only the immediate surroundings being visible.   
+Berry Bounce is a 2D platformer made in Unity that tests the player's ability to reach the end level whilst having enough time to complete all objectives. There is no traditional healthbar, rather the player's time will slowly decrease and once it reaches zero, the player loses. The game will increase in difficulty as you progress through levels with some levels introducing new mechanics such as moving platforms. Throughout the entire game the player's vision will be limited with only the immediate surroundings being visible. Credits to Jazlyn for the assets provided. 
 
 
-### :dart: Objective
+### Objective
 Reach the end of all the levels whilst keeping your current time in mind. Some levels may require collecting keys scattered around the map to progress to the next level. There are also collectables around each map shaped as clocks which can add to your current time so try to look for them as your time runs low. Once you are sure you have collected all keys within a level, you should find the exit which looks something like a door/tunnel. 
 
 
@@ -71,11 +70,9 @@ There have also been some features that were not implemented in time but were im
 
 | Key Bind | Action |
 | ----------- | ----------- |
-| . | . |
-| . | . |
-| . | . |
-| . | . |
-
+| Left Joystick | Move Left & Right |
+| Y | Jump |
+| B | Dash |
 ---
 
 ## Game Elements
@@ -120,3 +117,5 @@ There have also been some features that were not implemented in time but were im
 ![alt text](playerJumpAnimation.gif)
 #### Player Death
 ![alt text](playerDeathAnimation.gif)
+
+## [All Scripts](https://github.com/TempeHS/2025CT_Rex.L_name/tree/main/Assets/Scripts)
